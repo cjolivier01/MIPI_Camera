@@ -1,15 +1,15 @@
-try:
-    import cv2
-except ImportError:
-    print("Start to install opencv...")
-    os.system(f'sudo apt-get update')
-    os.system(f'sudo apt install nvidia-opencv-dev')
 import numpy as np
 from datetime import datetime
 import array
 import fcntl
 import os
 import argparse
+try:
+    import cv2
+except ImportError:
+    print("Start to install opencv...")
+    os.system(f'sudo apt-get update')
+    os.system(f'sudo apt install nvidia-opencv-dev')
 try:
     from utils import ArducamUtils
 except ImportError as e:
